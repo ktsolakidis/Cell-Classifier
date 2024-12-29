@@ -28,15 +28,18 @@ With this dataset we will try to train and test 4 different models and compare t
 5) "Enhanced" CNN
     A similar CNN with the previous one, with some changes that aim to reduce our loss function and get our accuracy up. More specifically:
 
-    Feature                         First CNN                   Second CNN
+## Model Comparison: Feature First CNN vs Second CNN
 
-    Convolutional Layers                 2                           3
-    Convolutions per block            Single               Double in the first block
-    L2 Regularization              Yes (Conv layers)        Yes(Dense layer only)
-    Dense Neurons                      128                         512
-    Dropout Rates                    0.25,0.5                  0.25,0.3,0.5
-    Padding                           Valid                       Same
-    Learning Rate Adjustment            No                   ReduceLROnPlateau
+| Feature                    | First CNN                  | Second CNN                       |
+|----------------------------|----------------------------|-----------------------------------|
+| **Convolutional Layers**   | 2                          | 3                                 |
+| **Convolutions per block** | Single                     | Double in the first block         |
+| **L2 Regularization**      | Yes (Conv layers)          | Yes (Dense layer only)            |
+| **Dense Neurons**          | 128                        | 512                               |
+| **Dropout Rates**          | 0.25, 0.5                  | 0.25, 0.3, 0.5                   |
+| **Padding**                | Valid                      | Same                              |
+| **Learning Rate Adjustment** | No                       | ReduceLROnPlate                  |
+
             
 
 
