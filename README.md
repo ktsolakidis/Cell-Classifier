@@ -4,7 +4,7 @@ the two cateogries of cell images are parasitized cells (infected), and healthy 
 
 # Description
 
-As i continue the exciting journey of machine learning, i started learning about Convolutional Neaural Networks and how the concept of convolution extracts information from an image.
+As I continue the exciting journey of machine learning, i started learning about Convolutional Neaural Networks and how the concept of convolution extracts information from an image.
 Before I dive deep into CNNs, I decided to visualise how effective they are by applying them on a binary images classification task.
 
 In this small project we will work with a dataset of images of infected (parasitized) and healthy cells. The images are of shape 64x64x3 (64 pixels width - 64 pixels height - 3 channels).
