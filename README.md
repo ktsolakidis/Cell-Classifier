@@ -26,7 +26,7 @@ With this dataset we will try to train and test 4 different models and compare t
     The fourth model is a simple Convolutional Neural Network (CNN). CNNs are specifically designed for image-related tasks, as they extract spatial hierarchies of features through convolutional layers. In this project, the CNN uses two convolutional layers followed by max-pooling layers for down-sampling.Dropout is again added to prevent overfitting. This model is expected to outperform the others, as CNNs are particularly well-suited for tasks like this, where the data is image-based.
 
 5) "Enhanced" CNN
-    A similar CNN with the previous one, with some changes that aim to reduce our loss function and get our accuracy up. More specifically:
+      A similar CNN with the previous one, with some changes that aim to reduce our loss function and get our accuracy up. More specifically:
 
 ## Model Comparison: Feature First CNN vs Second CNN
 
