@@ -1,54 +1,75 @@
-# Binary Image Classification models comparison
-This repository aims to compare different binary classification models on an image dataset of cells.
-the two cateogries of cell images are parasitized cells (infected), and healthy (uninfected) cells.
+# Binary Image Classification Models Comparison
 
-# Description
+This repository aims to compare different binary classification models on an image dataset of cells.  
+The two categories of cell images are parasitized cells (infected) and healthy (uninfected) cells.
 
-As I continue the exciting journey of machine learning, i started learning about Convolutional Neaural Networks and how the concept of convolution extracts information from an image.
-Before I dive deep into CNNs, I decided to visualise how effective they are by applying them on a binary images classification task.
+## Description
 
-In this small project we will work with a dataset of images of infected (parasitized) and healthy cells. The images are of shape 64x64x3 (64 pixels width - 64 pixels height - 3 channels).
+As I continue the exciting journey of machine learning, I started learning about Convolutional Neural Networks (CNNs) and how the concept of convolution extracts information from an image.  
+Before diving deep into CNNs, I decided to visualize how effective they are by applying them to a binary image classification task.
 
-With this dataset we will try to train and test 4 different models and compare the training and testing / validation results.
+In this small project, we work with a dataset of images of infected (parasitized) and healthy cells. The images are of shape 64x64x3 (64 pixels width, 64 pixels height, 3 color channels).
 
-1) Custom Logistic Regression from scratch.
-    The first one is a binary logistic regression model which I have built from scratch. This means no library like scikit-learn was used, just pure nice oldschool math with numpy. We will only use the shuffle function from scikit-learn to help us "mix" our dataset. This is important because otherwise the images we are using are in order of "Healthy - uninfected cells, Parasitized - infected cells".
+We train and test five different models, comparing their training and testing/validation results:
 
-2) Scikit - learn Logistic Regression Model. 
-    The second model will be Scikit-learn's Logistic Regression. It's not that different from our first model, we only use it to make sure that we get similar - if not the same - results with the previous model. We use it as a "check" to confirm that our previous from-scratch Logistic Regression model will produce similar results as this one.
+### 1. Custom Logistic Regression (from scratch)
 
-3) Dense Neural Netork (Fully connected).  
-    The third model is a Dense Neural Network (DNN), also known as a fully connected neural network.
-    For this project, we will be using two hidden layers, both activated by the ReLU function. 
-    The output layer uses a sigmoid activation function to produce probabilities for the binary classification. We will also add dropout layers to prevent overfitting. The goal here is to see how much improvement a simple neural network can offer over logistic regression, and aftet that, the difference between a Dense Neural Network, and a Convolutional Neural Network.
+This model is built from scratch using numpy, without relying on libraries like scikit-learn (except for the shuffle function).  
+The dataset is shuffled to avoid biases, as the images are ordered by class (healthy cells first, then infected cells).
 
-4) Convolutional Neural Network - CNN. 
-       The fourth model is a simple Convolutional Neural Network (CNN). CNNs are specifically designed for image-related tasks, as they extract spatial hierarchies of features through convolutional layers. In this project, the CNN uses two     convolutional layers followed by max-pooling layers for down-sampling.Dropout is again added to prevent overfitting. This model is expected to outperform the others, as CNNs are particularly well-suited for tasks like this, where the data is image-based.
+### 2. Scikit-learn Logistic Regression Model
 
-5) "Enhanced" CNN. 
-       A similar CNN with the previous one, with some changes that aim to reduce our loss function and get our accuracy up. More specifically:
+The second model uses Scikit-learn's Logistic Regression. This acts as a benchmark to ensure our custom implementation produces similar results.
 
-## Model Comparison: Feature First CNN vs Second CNN
+### 3. Dense Neural Network (Fully Connected)
 
-| Feature                    | First CNN                  | Second CNN                       |
+A Dense Neural Network (DNN) is also known as a fully connected neural network.  
+- **Architecture**:  
+  - Two hidden layers activated by the ReLU function.  
+  - An output layer with a sigmoid activation function to generate probabilities.  
+- **Features**:  
+  - Dropout layers are added to prevent overfitting.  
+  - The goal is to compare the performance improvement of a simple neural network over logistic regression and understand the difference between a Dense Neural Network and a Convolutional Neural Network.
+
+### 4. Convolutional Neural Network (CNN)
+
+A simple CNN designed specifically for image-related tasks.  
+- **Architecture**:  
+  - Two convolutional layers followed by max-pooling layers for down-sampling.  
+  - Dropout is added to prevent overfitting.  
+- CNNs are expected to outperform other models due to their ability to extract spatial features effectively.
+
+### 5. Enhanced CNN
+
+An advanced version of the previous CNN with improvements aimed at reducing the loss function and increasing accuracy.  
+**Key Features**:  
+- An additional convolutional layer.  
+- Doubling the number of convolutions in the first block.  
+- L2 regularization applied only to dense layers.  
+- Increased neurons in dense layers (512 vs. 128).  
+- Adjusted dropout rates for better regularization.  
+- "Same" padding instead of "valid."  
+- Learning rate adjustments using ReduceLROnPlate.
+
+---
+
+## Model Comparison: First CNN vs. Enhanced CNN
+
+| Feature                    | First CNN                  | Enhanced CNN                     |
 |----------------------------|----------------------------|-----------------------------------|
 | **Convolutional Layers**   | 2                          | 3                                 |
-| **Convolutions per block** | Single                     | Double in the first block         |
+| **Convolutions per Block** | Single                     | Double in the first block         |
 | **L2 Regularization**      | Yes (Conv layers)          | Yes (Dense layer only)            |
 | **Dense Neurons**          | 128                        | 512                               |
 | **Dropout Rates**          | 0.25, 0.5                  | 0.25, 0.3, 0.5                   |
 | **Padding**                | Valid                      | Same                              |
 | **Learning Rate Adjustment** | No                       | ReduceLROnPlate                  |
 
-            
+---
 
+## Contact
 
-Contact:
-
-Konstantinos Tsolakidis
-Machine Learning Engineer
-Hatzakis Lab - University of Copenhagen
-kontsolakidis25@gmail.com
-
-
-
+**Konstantinos Tsolakidis**  
+Machine Learning Engineer  
+Hatzakis Lab - University of Copenhagen  
+📧 kontsolakidis25@gmail.com  
