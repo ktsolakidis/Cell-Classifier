@@ -3,6 +3,16 @@
 This repository aims to compare different binary classification models on an image dataset of cells.  
 The two categories of cell images are parasitized cells (infected) and healthy (uninfected) cells.
 
+
+Healthy Cell 
+
+![C1_thinF_IMG_20150604_104722_cell_79](https://github.com/user-attachments/assets/fbde7e19-5227-41aa-8ce2-7ef66147383a)
+
+Infected - Parasitized Cell 
+
+![C39P4thinF_original_IMG_20150622_105335_cell_19](https://github.com/user-attachments/assets/4a213c0f-44c8-4035-9c91-a654061a718f)
+
+
 ## Description
 
 As I continue the exciting journey of machine learning, I started learning about Convolutional Neural Networks (CNNs) and how the concept of convolution extracts information from an image.  
