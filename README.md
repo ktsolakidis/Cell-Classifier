@@ -59,7 +59,7 @@ An advanced version of the previous CNN with improvements aimed at reducing the 
 - Increased neurons in dense layers (512 vs. 128).  
 - Adjusted dropout rates for better regularization.  
 - "Same" padding instead of "valid."  
-- Learning rate adjustments using ReduceLROnPlate.
+- Learning rate adjustments using ReduceLROnPlataeu.
 
 ---
 
