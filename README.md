@@ -63,7 +63,7 @@ An advanced version of the previous CNN with improvements aimed at reducing the 
 | **Dense Neurons**          | 128                        | 512                               |
 | **Dropout Rates**          | 0.25, 0.5                  | 0.25, 0.3, 0.5                   |
 | **Padding**                | Valid                      | Same                              |
-| **Learning Rate Adjustment** | No                       | ReduceLROnPlate                  |
+| **Learning Rate Adjustment** | No                       | ReduceLROnPlataeu                  |
 
 ---
 
